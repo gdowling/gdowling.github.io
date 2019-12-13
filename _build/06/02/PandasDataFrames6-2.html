@@ -1,0 +1,328 @@
+---
+redirect_from:
+  - "/06/02/pandasdataframes6-2"
+interact_link: content/06/02/PandasDataFrames6-2.ipynb
+kernel_name: python3
+kernel_path: content/06/02
+has_widgets: false
+title: |-
+  Pandasdataframes6-2
+pagenum: 13
+prev_page:
+  url: /06/01/PandasImporting6-1.html
+next_page:
+  url: 
+suffix: .ipynb
+search: pandas df dataframe pydata org docs html stable reference api columns data values column col id also replace want rename dataframes rows using value list loc returns mean name iloc usa print missing join tail min methods th null isnull method axis fillna bos boston new append concat import work same type creating below information head five info such math max series median std corr return just selecting easy any after select into place its observations uk observation index cleaning where true sum end drop dropna x multiple lists joining sure identical inner joins pandascreatedataframes working cover think excel spreadsheet
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Pandasdataframes6-2</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="pandas_create_dataframes"></a></p>
+<h2 id="Working-with-DataFrames-in-Pandas">Working with DataFrames in Pandas<a class="anchor-link" href="#Working-with-DataFrames-in-Pandas"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now that we know how to import dataframes we will now cover how to work with them. You can think of a dataframe as an excel spreadsheet. Each row of a datframe corresponds to measurements or values of an instance, while each column is a vector containing data for a specific feature. This means that a dataframe's rows do not need to contain the same type data type (i.e. they can be a float, integer, string, etc). This will be the most common data structure that you will work with.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Manually-Creating-DataFrame">Manually Creating DataFrame<a class="anchor-link" href="#Manually-Creating-DataFrame"> </a></h5><p>As opposed to reading in a file or connecting to a database, you can also create your own dataframe using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html"><code>DataFrame</code></a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">AgeData</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jeff&#39;</span><span class="p">,</span><span class="s1">&#39;Bill&#39;</span><span class="p">,</span><span class="s1">&#39;Nancy&#39;</span><span class="p">,</span><span class="s1">&#39;Greg&#39;</span><span class="p">,</span><span class="s1">&#39;Jill&#39;</span><span class="p">,</span><span class="s1">&#39;Anne&#39;</span><span class="p">,</span><span class="s1">&#39;Doug&#39;</span><span class="p">],</span> 
+              <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">]})</span> <span class="c1">#Creating dataframe</span>
+<span class="n">AgeData</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Jeff</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Bill</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Nancy</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Greg</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Jill</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Anne</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Doug</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="pandas_examining_data"></a></p>
+<h2 id="Examining-Data">Examining Data<a class="anchor-link" href="#Examining-Data"> </a></h2><p>Once you have your dataframe you will want to inspect it. Below are a few ways of getting quick information from your data frame.</p>
+<ul>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html"><code>df.head()</code></a> returns the first five rows</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.tail.html#pandas.DataFrame.tail"><code>df.tail()</code></a> returns the last five rows</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html"><code>df.info()</code></a> returns information on your dataframe such as columns, data types, RangeIndex, and memory usage</li>
+<li><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.columns.html"><code>df.columns</code></a> returns the columns in the dataframe.</li>
+<li>You can also run various math on your dataframe such as <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mean.html"><code>df.mean()</code></a>,<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.max.html"><code>df.max()</code></a>,<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.min.html#pandas.Series.min"><code>df.min</code></a>,<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.median.html"><code>df.median</code></a>,<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.std.html"><code>df.std()</code></a>,<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html"><code>df.corr()</code></a>, and many more. These methods will return a value for each of your columns.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Creating-Random-DataFrame-for-Examples">Creating Random DataFrame for Examples<a class="anchor-link" href="#Creating-Random-DataFrame-for-Examples"> </a></h5>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCD&#39;</span><span class="p">))</span> <span class="c1"># 100x4 dataframe</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Use the above methods you just learned to explore the example dataframe in the workspace below.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>A    2332.0
+B    2421.0
+C    2266.5
+D    2166.0
+dtype: float64</pre>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="pandas_selecting_data"></a></p>
+<h2 id="Selecting-Data">Selecting Data<a class="anchor-link" href="#Selecting-Data"> </a></h2><p>Pandas dataframes makes it easy to slice and dice our data in any way would would like.</p>
+<ul>
+<li>Selecting one column is as easy a putting the column you want in bracket after the dataframe name <code>df['Col1']</code>.</li>
+<li>To select more than one column put the columns you want into a list then place that list into brackets after the dataframe name <code>df[['Col1','Col2','Col3']]</code>.</li>
+<li>You can also select data based on its position <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.iloc.html"><code>iloc</code></a> or by its label using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html#pandas.DataFrame.loc"><code>loc</code></a>.<ul>
+<li><code>df.loc['USA']</code> will print out observations for USA</li>
+<li><code>df.loc[['USA','UK']]</code> will print out observations for USA and UK</li>
+<li><code>df.iloc[4]</code> will print out the observation in the 4th index </li>
+<li><code>df.iloc[[4,10]]</code> will print out the observation in the 4th and 10th index </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="pandas_data_cleaning"></a></p>
+<h2 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning"> </a></h2><p>Pandas also does a great job when it come to cleaning your dataframe.
+<a id="pandas_data_cleaning_missing_values"></a></p>
+<ul>
+<li><strong>Missing Values:</strong><ul>
+<li>One of the first steps you want to do when import a dataframe is check for null values. This can be done by calling   <code>df.isnull()</code>. This will return a Boolean array of your dataframe where True equals a null value. If you want the total of null values by column simply place the <code>sum()</code> method at the end of the statement <a href="https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.isnull.html"><code>df.isnull().sum()</code></a> (You can perform math on Booleans in Python, True will be treated as ones and False as zeros).</li>
+<li>You can drop all missing values using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html"><code>df.drop_na()</code></a>, the arguement <code>axis=0</code> will drop the rows and <code>axis=1</code> the columns.</li>
+<li>You can impute the missing values using <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html"><code>df.fillna(x)</code></a> where <code>x</code> can be any value. Here you would be using the mean to replace missing values in <code>Col1</code> <code>df['Col1'].fillna(df['Col1'].mean())</code>. 
+<a id="pandas_data_cleaning_replacing_values"></a>    </li>
+</ul>
+</li>
+<li><strong>Replacing Values:</strong><ul>
+<li>Sometimes you want to replace a value in dataframe. To do this in pandas you use the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.replace.html"><code>replace</code></a> method. <code>df.replace('Bos','Boston')</code> would replace Bos with Boston. This also works with multiple values just use lists, <code>df.replace(['Bos','NYC'],['Boston','New York City'])</code>.
+<a id="pandas_data_cleaning_renaming_lists"></a>    </li>
+</ul>
+</li>
+<li><strong>Renaming Lists:</strong><ul>
+<li>Data will often come without, incorrect, or long column names. You can rename columns by feeding a new list to <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.columns.html"><code>df.columns</code></a>, but this will require you to have a list of the same length as the current column list. The best way to rename columns is to use the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html"><code>rename</code></a> method.<code>rename</code> requires a dictionay of the old column name as the key and new column name as the value pair ' <code>df.rename({'Col1' : 'Column_1', 'Col2' : 'Column_2'})</code>.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="pandas_joining_data"></a></p>
+<h2 id="Joining-Data">Joining Data<a class="anchor-link" href="#Joining-Data"> </a></h2><p>There are three main methods around joining data in pandas: <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.append.html"><code>append</code></a>, <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html"><code>concat</code></a>, and <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html"><code>join</code></a>.</p>
+<ul>
+<li><code>df1.append(df2)</code> will stack the two dataframes df1 on top of df2. Make sure the columns are identical.</li>
+<li><code>df1.concat(df2,axis=1)</code> this will add the columns of df2 to the end of df1. Make sure the rows are identical.</li>
+<li><code>df1.join(df2,on = ['Col1'],how = 'inner')</code> This joins the columns in df1 with the columns in df2 were <code>Col1</code> have matching values. You can also do left, right, outer, and inner joins. You can also join on multiple values.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
