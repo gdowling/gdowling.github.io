@@ -25,9 +25,6 @@
 - title: Search
   search: true
 
-# Divider for meta-pages and content page
-- divider: true
-
 - header: Python Field Manual
 
 - title: Indroduction
