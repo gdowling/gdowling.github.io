@@ -32,11 +32,12 @@
 
 - title: Indroduction
   url: /01/Introduction1
+  not_numbered: true
 
 - title: Installation
   url: /02/Installation2
 
-- title: Data Types
+- title: Data-Types
   url: /03/DataTypes3
 
 - title: Data Structures
@@ -44,18 +45,18 @@
 
 - title: Packages
   url: /05/PackagesOverview5
-  expand_sections: true
+  expand_sections: false
   sections:
-  - title: Installing & Importing Packages
+  - title: Installing-&-Importing-Packages
     url: /05/01/InstallingImportingPackages5-1
-  - title: Key Packages
+  - title: Key-Packages
     url: /05/02/KeyPythonPackages5-2
 
 - title: Pandas
   url: /06/PandasOverview6
-  expand_sections: true
+  expand_sections: false
   sections:
-  - title: Importing Data
+  - title: Importing-Data
     url: /06/01/PandasImporting6-1
-  - title: DataFrame Fundamentals
+  - title: DataFrame-Fundamentals
     url: /06/02/PandasDataFrames6-2
