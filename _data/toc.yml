@@ -21,13 +21,6 @@
 #
 # See the links below for an example.
 
-
-# External link
-- title: GitHub repository
-  url: https://github.com/gdowling/gdowling.github.io
-  external: true
-  not_numbered: true
-
 # Adds a searchbar link
 - title: Search
   search: true
