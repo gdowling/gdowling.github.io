@@ -21,14 +21,10 @@
 #
 # See the links below for an example.
 
-# Top-level page
-- title: Home
-  url: /intro
-  not_numbered: true
 
 # External link
 - title: GitHub repository
-  url: https://github.com/jupyter/jupyter-book
+  url: https://github.com/gdowling/gdowling.github.io
   external: true
   not_numbered: true
 
@@ -39,36 +35,34 @@
 # Divider for meta-pages and content page
 - divider: true
 
-# Add a header and sample content section
-- header: Demo textbook
+- header: Python Field Manual
 
-# A chapter w/ a collection of sections beneath it
-- title: Features and customization
-  url: /features/features
-  not_numbered: true
+- title: Indroduction
+  url: /01/Introduction1
+
+- title: Installation
+  url: /02/Installation2
+
+- title: Data Types
+  url: /03/DataTypes3
+
+- title: Data Structures
+  url: /04/DataStructures4
+
+- title: Packages
+  url: /05/PackagesOverview5
   expand_sections: true
   sections:
-  - title: Markdown files
-    url: /features/markdown
-    not_numbered: true
-  - title: Jupyter notebooks
-    url: /features/notebooks
-    not_numbered: true
+  - title: Installing & Importing Packages
+    url: /05/01/InstallingImportingPackages5-1
+  - title: Key Packages
+    url: /05/02/KeyPythonPackages5-2
 
-- url: /01/Introduction1
-
-- url: /02/Installation2
-
-- url: /03/DataTypes3
-
-- url: /04/DataStructures4
-
-- url: /05/PackagesOverview5
+- title: Pandas
+  url: /06/PandasOverview6
+  expand_sections: true
   sections:
-  - url: /05/01/InstallingImportingPackages5-1
-  - url: /05/02/KeyPythonPackages5-2
-
-- url: /06/PandasOverview6
-  sections:
-  - url: /06/01/PandasImporting6-1
-  - url: /06/02/PandasDataFrames6-2
+  - title: Importing Data
+    url: /06/01/PandasImporting6-1
+  - title: DataFrame Fundamentals
+    url: /06/02/PandasDataFrames6-2
