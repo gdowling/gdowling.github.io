@@ -57,3 +57,45 @@
     url: /06/01/PandasImporting6-1
   - title: DataFrame-Fundamentals
     url: /06/02/PandasDataFrames6-2
+
+- title: Numpy
+  url: /07/Numpy7
+  expand_sections: false
+  sections:
+  - title: Numpy-Placeholder1
+    url: /07/01/Numpy7-1
+  - title: Numpy-Placeholder2
+    url: /07/02/Numpy7-2
+
+- title: Plotly
+  url: /08/plotly-8
+  expand_sections: false
+  sections:
+  - title: Plotly-Placehodler1
+    url: /08/01/plotly8-1
+  - title: Plotly-Placeholder2
+    url: /08/02/plotly8-2 
+  - title: Plotly-Placeholder3
+    url: /08/03/plotly8-3
+  - title: Plotly-Placeholder4
+    url: /08/04/plotly8-4
+  - title: Plotly-Placeholder5
+    url: /08/05/plotly8-5
+  - title: Plotly-Placeholder6
+    url: /08/06/plotly8-6
+  - title: Plotly-Placeholder7
+    url: /08/07/plotly8-7
+  - title: Plotly-Placeholder8
+    url: /08/08/plotly8-8
+  - title: Plotly-Placeholder9
+    url: /08/09/plotly8-9
+  - title: Plotly-Placeholder10
+    url: /08/10/plotly8-10
+  - title: Plotly-Placeholder11
+    url: /08/11/plotly8-11
+  - title: Plotly-Placehodler12
+    url: /08/12/plotly8-12
+  - title: Plotly-Placeholder13
+    url: /08/13/plotly8-13
+  
+
