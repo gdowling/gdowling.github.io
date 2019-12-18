@@ -68,12 +68,44 @@
     url: /07/02/Numpy7-2
 
 - title: Plotly
+  url: /08/Plotly8
   expand_sections: false
   sections:
-  - title: Plotly-Placeholder10
+  - title: Plotly Graph Options
+    url: /08/01/plotly8-1
+  - title: Example Data
+    url: /08/02/plotly8-2
+  - title: Scatter Plots
+    url: /08/03/plotly8-3
+  - title: Line Charts
+    url: /08/04/plotly8-4
+  - title: Bar Charts
+    url: /08/05/plotly8-5
+  - title: Bubble Charts
+    url: /08/06/plotly8-6
+  - title: Box Plots
+    url: /08/07/plotly8-7
+  - title: Distribution Plots
+    url: /08/08/plotly8-8
+  - title: Facet Plots
+    url: /08/09/plotly8-9
+  - title: Sub Plots
     url: /08/10/plotly8-10
-
+  - title: Heatmaps
+    url: /08/11/plotly8-11
+  - title: Waterfall Charts
+    url: /08/12/plotly8-12
 
 - title: Machine-Learning
   url: /09/ML9
-
+  expand_sections: false
+  sections:
+  - title: Supervised Learning Models
+    url: /09/01/ML9-1
+  - title: Generalized Linear Models
+    url: /09/02/ML9-2-01
+    subsections:
+    - title: Mulitple Regression
+      url: 09/02/01/ML9-2-02
+    - title: Polynomial Regression
+      url: 09/02/01/ML9-2-03
