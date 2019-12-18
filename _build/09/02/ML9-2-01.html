@@ -1,0 +1,154 @@
+---
+redirect_from:
+  - "/09/02/ml9-2-01"
+interact_link: content/09/02/ML9-2-01.ipynb
+kernel_name: python3
+kernel_path: content/09/02
+has_widgets: false
+title: |-
+  Generalized Linear Models
+pagenum: 28
+prev_page:
+  url: /09/01/ML9-1.html
+next_page:
+  url: /09/02/01/ML9-2-02.html
+suffix: .ipynb
+search: regression linear variable independent dependent variables our y squared represents between line x r simple relationship increase b means want equal section methods thus any should method decrease certain predicting m known zero running p value threshold coefficient determination variance generalized models cover several variations derived before attempting advanced comfortable operating overview only learn machine learning calculates single basically amount much equation expressed mx math idea best fit goes through series points such minimize sum residuals layman terms minimizes distance predictions actual values square difference weight positive negatives misses equally trying predict explain help explaining slope effect e increases unit
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div id="page-info"><div id="page-title">Generalized Linear Models</div>
+</div>
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Generalized-Linear-Models">Generalized Linear Models<a class="anchor-link" href="#Generalized-Linear-Models"> </a></h2>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this section we will cover several variations of Linear Regression. All methods in this section can be derived from the simple linear regression thus before attempting any of the more advanced regression methods you should be comfortable operating with the simple linear regression.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Simple-Linear-Regression">Simple Linear Regression<a class="anchor-link" href="#Simple-Linear-Regression"> </a></h3>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h4><p>If you were to only learn one machine learning method, that method should the linear regression. Linear regression calculates the linear relationship between a single dependent variable and one or more independent variables. Basically, when our independent variables increase or decrease by a certain amount how much will our dependent increase or decrease.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The equation for a linear regression can be expressed as:</p>
+<p>Y = mX + b</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Math">Math<a class="anchor-link" href="#Math"> </a></h4><p>The idea of a linear regression is to find a line of best fit when predicting our dependent variable. This means that we want to find a line that goes through a series of points such that we minimize the sum of the squared residuals. In layman terms we want a line that minimizes the distance between our predictions and the actual values. We square this difference to weight the positive and negatives misses equally.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="s1">&#39;LinearRegression.png&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="jb_output_wrapper }}">
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea output_execute_result">
+<img src="../../images/09/02/ML9-2-01_6_0.png"
+>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Y represents our dependent variable or the variable that we are trying to predict/explain. X represents our independent variable or the variable that will help in predicting/explaining Y. m represents the slope of the regression line which represents the effect that X has on Y (i.e. If X increases by one unit then Y will increase by m units). b represents a constant or the known y intercept, if X were to equal zero then Y would be equal to b.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Key-Principles">Key Principles<a class="anchor-link" href="#Key-Principles"> </a></h4><p><em>Statistical Significance</em></p>
+<p>An important thing to note when running any linear regression analysis is to ensure that the relationship between your independent variables and dependent variable is statistically significant. What that means is to check the p-value for each of the independent variables to make sure it meets your threshold. The standard threshold is a 95% confidence interval and corresponds to a p-value that is less than 0.05. What this means is we are 95% certain that the independent variable is not equal to zero, thus having no relationship with our dependent variable.</p>
+<p><em>Coefficient of Determination</em></p>
+<p>When running a regression, you will want to know how explanatory your independent variables are. This is measured using the coefficient of determination, better known as R-Squared. R-Squared is the proportion of the variance in the dependent variable that is predictable from the independent variables. It is between 0 and 1, where 1 would mean that 100% of the dependent variable’s variance is explained by your independent variables. There is no magic number for what is a good or acceptable R-Squared instead you must use your own intuition of what R-Squared would be adequate given your data.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
